@@ -1,4 +1,8 @@
-#Usage
+#Introduction
+This is a shopping cart demo built via React+Redux
+
+
+##Usage
 
 1. cd to the root directory and `npm install` 
 2. run the app with `npm start`
@@ -24,8 +28,3 @@
 ##reducers
 - redux reducers which are responsible for the takeing the currnet store state and return the next state
 
-##assets
-- pictures
-
-##data
-- product.json
