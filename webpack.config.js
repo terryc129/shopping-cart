@@ -3,9 +3,6 @@ module.exports={
 	output:{
 		filename:'bundle.js'
 	},
-	"scripts": {
-    "start": "webpack-dev-server"
- 	 },
     module:{
 	  loaders:[
 	  	{
