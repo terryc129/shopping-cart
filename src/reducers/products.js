@@ -1,4 +1,4 @@
-const { combineReducers } =require ('redux');
+import { combineReducers } from 'redux'
 
 
 
@@ -36,6 +36,9 @@ const filterPrice=(price,pfilter=[])=>{
     return pfilter.map(p=>p[0]).includes(price[0]);
 
 };
+
+
+
 
 
 export default products

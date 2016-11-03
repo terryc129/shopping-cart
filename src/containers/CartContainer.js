@@ -17,9 +17,14 @@ const CartContainer=({productsAdded,quantityList,dispatch})=>{
 				{
 					
 					productsAdded.map(product=>
-						<CartProduct dispatch={dispatch}quantity={quantityList[product.id]} key={ product.id } {...product}  />
+						<CartProduct 
+							dispatch={dispatch} 
+							quantity={quantityList[product.id]} 
+							key={ product.id } 
+							{...product}  
+						/>
 					)
-		
+			
 				}
 				</ul>
 			</div>
