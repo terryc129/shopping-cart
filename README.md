@@ -26,5 +26,5 @@ This is a shopping cart demo built via React+Redux
 
 
 ##reducers
-- redux reducers which are responsible for the takeing the currnet store state and return the next state
+- redux reducers which are responsible for taking the currnet store state and return the next state
 

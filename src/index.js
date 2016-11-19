@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { Router, Route,hashHistory } from 'react-router'
-import { createStore } from 'redux';
+import { createStore,applyMiddleware } from 'redux';
 import { Provider } from 'react-redux'
 import reducer from './reducers'
 import{products as serverProducts, filters as serverFilter}  from './data/products.json'
@@ -9,10 +9,15 @@ import ProductBrowseContainer from './containers/ProductBrowseContainer'
 import CartContainer from './containers/CartContainer'
 import ProductDetailContainer from './containers/ProductDetailContainer'
 import css from './css/app.css'
+import thunk from 'redux-thunk'
+import createLogger from 'redux-logger'
+
+const middlewares=[];
+if(process.env.NODE_ENV !=='production')
+middlewares.push(createLogger());
 
 
-
-const store=createStore(reducer);
+const store=createStore(reducer,applyMiddleware(...middlewares));
 
 
 store.dispatch({

@@ -11,14 +11,14 @@ const getActiveList=(name,activeFilters)=>{
 
  };
 
-const FilterList=({filters,activeFilters,dispatch})=>{
+const FilterList=({filters,activeFilters,onFilterTick})=>{
  
  
   return (
 		<ul className='filterList'>
 		{
 			filters.map(filter=>
-				 <Filter  key={filter.name} dispatch={dispatch}
+				 <Filter  key={filter.name} onFilterTick={onFilterTick}
 			     activeFilterList={getActiveList(filter.name,activeFilters)}  {...filter}  
 			     />
 			

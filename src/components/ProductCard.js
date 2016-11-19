@@ -1,25 +1,25 @@
 import React from 'react'
 import {Link} from 'react-router'
-import { goToDetail, addToCart} from '../actions'
 
 
 
 
 
-const ProductCard=({name,measurement,price,image,id,dispatch})=>{
+
+const ProductCard=({name,measurement,price,image,id,onAddToCartClick,onCardClick})=>{
 
   return (
   	 <div className='card'>
   	    <div className='content'>
   	    <Link to='/pdp' 
-  			onClick={()=>dispatch(goToDetail(id))}>
+  			onClick={()=>onCardClick(id)}>
   	 	<img src={'src/assets/'+image}/>
   	 	<div >{name}</div>
 		<div>{measurement}</div>
 		<div className='price'>{'$'+price}</div>
 		</Link>
 		</div>
-		<button onClick={()=>dispatch(addToCart(id))}>
+		<button onClick={()=>onAddToCartClick(id)}>
 		Add to Cart
 		</button>
 	 </div>

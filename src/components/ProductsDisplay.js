@@ -1,7 +1,7 @@
 import React from 'react'
 import ProductCard from './ProductCard'
 
-const ProductsDisplay=({products,dispatch})=>{
+const ProductsDisplay=({products,onAddToCartClick,onCardClick})=>{
 
 	return (
 		<ul className='display'>
@@ -10,7 +10,14 @@ const ProductsDisplay=({products,dispatch})=>{
 			products.map(product=>{
 			
 			
-			  return (<ProductCard  dispatch={dispatch}key={product.id} {...product} />)
+			  return (
+			  	<ProductCard  
+			  		onCardClick={onCardClick}
+			  		onAddToCartClick={onAddToCartClick}
+			  		key={product.id} 
+			  		{...product} 
+			  	/>
+			  )
 			}
 			)
 
