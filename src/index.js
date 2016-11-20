@@ -12,7 +12,7 @@ import css from './css/app.css'
 import thunk from 'redux-thunk'
 import createLogger from 'redux-logger'
 
-const middlewares=[];
+const middlewares=[thunk];
 if(process.env.NODE_ENV !=='production')
 middlewares.push(createLogger());
 
